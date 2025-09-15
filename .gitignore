@@ -1,0 +1,12 @@
+# Streamlit
+__pycache__/
+*.pyc
+.env
+credentials.json
+
+# VSCode
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
