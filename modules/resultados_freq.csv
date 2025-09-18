@@ -1,0 +1,14 @@
+Variável,Coeficiente (log),IRR (exp(coef)),IC 95% (low),IC 95% (high),p-valor
+Intercept,-1.625,0.197,0.158,0.246,0.0
+C(tp_rede)[T.Pública],-0.757,0.469,0.378,0.583,0.0
+C(tp_organizacao_academica)[T.Faculdade],-0.06,0.941,0.837,1.059,0.3151
+"C(tp_organizacao_academica)[T.Instituto Federal de Educação, Ciência e Tecnologia]",0.308,1.36,0.906,2.042,0.1375
+C(tp_organizacao_academica)[T.Universidade],-0.246,0.782,0.683,0.894,0.0003
+C(tp_grau_academico)[T.Licenciatura],0.004,1.004,0.913,1.105,0.9304
+C(tp_grau_academico)[T.Não aplicável],1.499,4.475,2.705,7.404,0.0
+C(tp_grau_academico)[T.Tecnológico],0.069,1.072,0.992,1.158,0.0799
+C(tp_modalidade_ensino)[T.Presencial],-0.581,0.559,0.5,0.625,0.0
+qt_conc,-0.001,0.999,0.998,1.001,0.2162
+prop_doc_avancado,1.715,5.555,4.227,7.299,0.0
+prop_ing_pp,0.348,1.417,1.298,1.546,0.0
+prop_ing_financiados,-0.204,0.815,0.505,1.315,0.4024
