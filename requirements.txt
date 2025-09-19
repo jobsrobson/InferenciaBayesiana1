@@ -7,4 +7,4 @@ matplotlib
 numpy
 statsmodels
 altair
-psycopg2
+psycopg2-binary
