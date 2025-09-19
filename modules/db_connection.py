@@ -9,12 +9,12 @@ def get_db_credentials():
     # 1. Tenta variáveis de ambiente
     if "DB_USER" in os.environ:
         return {
-            "db_user": os.environ["db_user"],
-            "db_password": os.environ["db_password"],
-            "db_host": os.environ["db_host"],
-            "db_port": os.environ.get("db_port", "5432"),
-            "db_name": os.environ["db_name"],
-            "db_schema": os.environ.get("db_schema", "public"),
+            "db_user": os.environ["DB_USER"],
+            "db_password": os.environ["DB_PASSWORD"],
+            "db_host": os.environ["DB_HOST"],
+            "db_port": os.environ.get("DB_PORT", "5432"),
+            "db_name": os.environ["DB_NAME"],
+            "db_schema": os.environ.get("DB_SCHEMA", "public"),
         }
     # 2. Tenta secrets do Streamlit Cloud
     try:
