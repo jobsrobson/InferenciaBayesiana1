@@ -1,8 +1,23 @@
 import json
 import sqlalchemy
 from pathlib import Path
+import os
 
-CREDENTIALS_PATH = Path(__file__).parent.parent / 'credentials.json'
+if "DB_USER" in os.environ:
+    # Credenciais do ambiente (Streamlit Cloud)
+    CREDENTIALS_PATH = None
+    def get_db_credentials():
+        return {
+            "db_user": os.environ["DB_USER"],
+            "db_password": os.environ["DB_PASSWORD"],
+            "db_host": os.environ["DB_HOST"],
+            "db_port": os.environ.get("DB_PORT", "5432"),
+            "db_name": os.environ["DB_NAME"],
+            "db_schema": os.environ.get("DB_SCHEMA", "public"),
+        }
+else:
+    # Credenciais locais via arquivo
+    CREDENTIALS_PATH = Path(__file__).parent.parent / 'credentials.json'
 
 def get_db_credentials():
     with open(CREDENTIALS_PATH, 'r') as f:
