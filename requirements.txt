@@ -1,3 +1,9 @@
 streamlit
 pandas
 sqlalchemy
+plotly
+arviz
+matplotlib
+numpy
+statsmodels
+altair

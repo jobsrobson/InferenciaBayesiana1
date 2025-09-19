@@ -5,7 +5,6 @@ import arviz as az
 import matplotlib.pyplot as plt
 import numpy as np
 
-import arviz as az
 
 # Carregar trace salvo
 idata = az.from_netcdf("modules/modelo_bayesiano_trace.nc")
