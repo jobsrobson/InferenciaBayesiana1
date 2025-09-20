@@ -2,7 +2,6 @@ import streamlit as st
 import json
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
 
 # ======================================================
@@ -222,7 +221,7 @@ with tab3:
 
     st.markdown("#### Resumo dos Resultados")
     st.markdown("<br>", unsafe_allow_html=True)
-    
+
     st.markdown(f"""
     - **Curso:** {curso}  
     - **IES:** {ies}  
