@@ -1,0 +1,35 @@
+{
+    "metricas": {
+        "glm_poisson": {
+            "r2": 0.8265579280205516,
+            "rmse": 586.5501631993588,
+            "mae": 7.222720467176457
+        }
+    },
+    "previsoes": {
+        "curso_alvo": "Ciência De Dados E Inteligência Artificial",
+        "ies_alvo": "CENTRO UNIVERSITÁRIO DO INSTITUTO DE EDUCAÇÃO SUPERIOR DE BRASÍLIA - IESB",
+        "real_2023": 16,
+        "glm_poisson": 46.40257812809445,
+        "bayesian": {
+            "media": 12.792942409583045,
+            "ic_low": 1.0,
+            "ic_high": 41.0,
+            "coeficientes": {
+                "prop_doc_avancado": 0.025403420942386404,
+                "qt_conc": -0.40625654412543477,
+                "prop_ing_pp": -0.23073887553760336,
+                "prop_ing_financiados": -0.22604937916173265,
+                "tp_rede_Pública": -0.21918859873404858,
+                "tp_organizacao_academica_Faculdade": 0.7660871759167475,
+                "tp_organizacao_academica_Instituto Federal de Educação, Ciência e Tecnologia": -0.10271095254662671,
+                "tp_organizacao_academica_Universidade": 0.21667920012775002,
+                "tp_grau_academico_Licenciatura": 0.5614589574049892,
+                "tp_grau_academico_Não aplicável": -0.16532725499788845,
+                "tp_grau_academico_Tecnológico": 0.7991891809431464,
+                "tp_modalidade_ensino_Presencial": -0.910619705370203,
+                "intercept": -1.209925787916897
+            }
+        }
+    }
+}

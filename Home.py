@@ -177,7 +177,8 @@ def load_complete_ride_data():
         return df, None
     except Exception as e:
         return None, str(e)
-
+    
+	
 # Função para calcular métricas derivadas
 def calcular_metricas_educacionais(df):
     """Calcula métricas derivadas dos dados integrados"""
@@ -236,12 +237,30 @@ st.markdown("Analisar os fatores institucionais e socioeconômicos associados ao
 
 st.divider()
 
-st.markdown("##### **Problema de Pesquisa**")
+st.markdown("##### **Problema de Pesquisa - Análise Inferencial e Preditiva**")
+
 st.markdown(
 	"<span style='color:#1565c0; font-weight:bold;'>***Quais fatores institucionais e socioeconômicos estão associados ao número de matrículas em cursos de graduação na RIDE-DF em 2023?***</span>",
 	unsafe_allow_html=True
 )
-st.markdown("O Censo da Educação Superior fornece uma fotografia transversal das matrículas em 2023, impossibilitando análises de trajetória longitudinal ou projeções futuras. Nesse contexto, torna-se relevante investigar quais elementos institucionais, acadêmicos e sociodemográficos explicam a variação no volume de matrículas entre cursos e instituições na RIDE-DF, permitindo compreender padrões de acesso e atratividade do ensino superior na região.",
+
+st.markdown(
+	"""
+	O **Censo da Educação Superior** fornece uma fotografia transversal das matrículas em 2023, que impossibilita análises de trajetória longitudinal ou projeções automáticas de séries temporais. Entretanto, a partir dessa base, é possível avançar em **duas frentes complementares**:  
+
+	- 🔎 **Análise inferencial**: identificar quais fatores institucionais, acadêmicos e sociodemográficos 
+	estão associados a diferenças nas taxas de ingresso entre cursos e instituições.  
+	Essa abordagem busca compreender padrões de seletividade, atratividade e inclusão no ensino superior da RIDE-DF.  
+
+	- 🔮 **Análise preditiva**: dado o perfil de um curso (rede, organização acadêmica, grau, modalidade, 
+	qualificação docente, composição de ingressantes, etc.), estimar **quantos novos alunos se espera captar**.  
+	Essa dimensão amplia o escopo do estudo, permitindo simular cenários hipotéticos e subsidiar decisões de 
+	planejamento acadêmico e estratégico.  
+
+	Assim, a pesquisa combina a **robustez explicativa dos modelos inferenciais** com a 
+	**utilidade prática das previsões**, contribuindo tanto para o entendimento científico 
+	quanto para o apoio à gestão educacional.
+	""",
 	unsafe_allow_html=True
 )
 
