@@ -111,25 +111,11 @@ with tab2:
     - **Intervalo de Credibilidade 90%:** {ic_low:.1f} – {ic_high:.1f}
     """)
 
+    st.markdown("<br>", unsafe_allow_html=True)
+
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("###### Bayesiano vs Valor Real")
-        # Gráfico comparativo Bayes x Real
-        import plotly.graph_objects as go
-
-        categorias = ["Real 2023", "Bayesiano (média)"]
-        valores = [real_2023, prev_bayes]
-
-        fig = go.Figure(data=[
-            go.Bar(x=categorias, y=valores, marker_color=["#66c2a5", "#8da0cb"])
-        ])
-        fig.update_layout(
-            yaxis_title="Número de ingressantes",
-            height=400,
-            width=500
-        )
-        st.plotly_chart(fig, use_container_width=True)
-
         # Intervalo de credibilidade
         # Adicionar intervalo de credibilidade com Plotly
         import plotly.graph_objects as go
