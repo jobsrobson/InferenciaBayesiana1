@@ -144,6 +144,8 @@ if df is not None and not df.empty:
     O modelo de **Regressão Binomial Negativa** buscou identificar quais fatores institucionais e socioeconômicos estão associados à taxa de ingresso em cursos de graduação na RIDE-DF em 2023, isto é, o número de ingressantes ajustado pelo tamanho total de matrículas de cada curso.
             """)
     
+    st.markdown("<br>", unsafe_allow_html=True)
+    
     # Tabs
     tab1, tab2, tab3 = st.tabs(["Descrição do Modelo", "Variáveis do Modelo", "Resultados do Modelo"])
     with tab1:

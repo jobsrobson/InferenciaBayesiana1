@@ -37,6 +37,8 @@ st.markdown("""
 O modelo **Bayesiano Binomial Negativo** buscou identificar os fatores institucionais e socioeconômicos associados à **taxa de ingresso em cursos de graduação na RIDE-DF em 2023**, ajustada pelo tamanho do curso.
 """)
 
+st.markdown("<br>", unsafe_allow_html=True)
+
 # Tabs
 tab1, tab2, tab3 = st.tabs(["Descrição do Modelo", "Variáveis do Modelo", "Resultados do Modelo"])
 

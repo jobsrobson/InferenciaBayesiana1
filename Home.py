@@ -225,20 +225,25 @@ def calcular_metricas_educacionais(df):
 
 
 
-st.subheader("Análise Comparativa entre Modelo Frequentista e Bayesiano nos dados de Educação Superior na RIDE-DF")
+st.markdown("### Análise Comparativa entre Modelo Frequentista e Bayesiano<br>nos dados de Educação Superior na RIDE-DF", unsafe_allow_html=True)
 
 st.markdown("<br>**Autor:** Robson Ricardo Leite da Silva <br> **Matrícula:** 22112120015 <br> **Curso:** Ciência de Dados e Inteligência Artificial<br> **Disciplina:** Inferência Bayesiana (2°/2025) <br> **Instituição:** IESB - Instituto de Educação Superior de Brasília", unsafe_allow_html=True)
 
 st.divider()
 
 st.markdown("##### **Objetivo**")
-st.markdown("Analisar os fatores institucionais e socioeconômicos associados ao número de matrículas (QT_MAT) nos cursos de graduação da RIDE-DF em 2023, considerando características dos cursos, perfis discentes e atributos das instituições de ensino.")
+st.markdown("Analisar os fatores institucionais e socioeconômicos associados ao número de matrículas (QT_MAT) nos cursos de graduação da RIDE-DF em 2023, considerando características dos cursos, perfis dos discentes e atributos das instituições de ensino.")
 
 st.divider()
 
 st.markdown("##### **Problema de Pesquisa**")
-st.markdown("***Quais fatores institucionais e socioeconômicos estão associados ao número de matrículas em cursos de graduação na RIDE-DF em 2023?***")
-st.markdown("O Censo da Educação Superior fornece uma fotografia transversal das matrículas em 2023, impossibilitando análises de trajetória longitudinal ou projeções futuras. Nesse contexto, torna-se relevante investigar quais elementos institucionais, acadêmicos e sociodemográficos explicam a variação no volume de matrículas entre cursos e instituições na RIDE-DF, permitindo compreender padrões de acesso e atratividade do ensino superior na região.")
+st.markdown(
+	"<span style='color:#1565c0; font-weight:bold;'>***Quais fatores institucionais e socioeconômicos estão associados ao número de matrículas em cursos de graduação na RIDE-DF em 2023?***</span>",
+	unsafe_allow_html=True
+)
+st.markdown("O Censo da Educação Superior fornece uma fotografia transversal das matrículas em 2023, impossibilitando análises de trajetória longitudinal ou projeções futuras. Nesse contexto, torna-se relevante investigar quais elementos institucionais, acadêmicos e sociodemográficos explicam a variação no volume de matrículas entre cursos e instituições na RIDE-DF, permitindo compreender padrões de acesso e atratividade do ensino superior na região.",
+	unsafe_allow_html=True
+)
 
 st.divider()
 
@@ -268,10 +273,12 @@ with c1:
     st.markdown("**Variável Dependente:**")
     st.markdown("- QT_MAT (Número de Matrículas)")
 with c2:
-    st.markdown("**Variáveis Independentes (Grupos):**")
-    st.markdown("- Institucionais")
-    st.markdown("- Acadêmicas")
-    st.markdown("- Demográficas")
-    st.markdown("- Socioeconômicas")
-    st.markdown("- Geográficas")
+	st.markdown("""
+**Variáveis Independentes (Grupos):**
+- Institucionais
+- Acadêmicas
+- Demográficas
+- Socioeconômicas
+- Geográficas
+""")
     
