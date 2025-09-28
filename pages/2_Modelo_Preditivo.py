@@ -8,8 +8,8 @@ import numpy as np
 # Configuração da página
 # ======================================================
 
-st.subheader("Modelos Preditivos - Predição de Ingressantes")
-st.markdown("Esta página apresenta os resultados dos modelos Frequentista e Bayesiano, usados com o objetivo de prever o número de ingressantes para o curso de **Ciência de Dados e Inteligência Artificial** do **IESB**, em 2023.")
+st.subheader("Modelos Preditivos: Estimativa de Ingressantes")
+st.markdown("Resultados dos modelos Frequentista e Bayesiano aplicados à previsão do número de ingressantes no curso de Ciência de Dados e Inteligência Artificial do IESB, em 2023.")
 
 # ======================================================
 # Carregar resultados salvos
@@ -30,7 +30,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 
 # tabs
-tab1, tab2, tab3 = st.tabs(["Detalhes dos Modelos", "Resultados e Visualizações", "Comparação dos Modelos"])
+tab1, tab2, tab3 = st.tabs(["📑 Introdução e Detalhes", "📈 Resultados dos Modelos", "⚖️ Comparação dos Modelos"])
 
 with tab1:
 
@@ -38,13 +38,15 @@ with tab1:
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown(""" 
-Nos últimos anos, o cenário do ensino superior brasileiro passou por transformações profundas. A **pandemia de Covid-19**, iniciada em 2020, interrompeu aulas presenciais, acelerou a adoção do ensino remoto e gerou incertezas tanto para estudantes quanto para instituições. Muitos cursos viram queda nas matrículas, evasões inesperadas e uma reorganização no perfil de ingressantes. Em meio a esse contexto de instabilidade, entender o **comportamento da demanda por cursos específicos** tornou-se uma tarefa estratégica para universidades e centros universitários.
+        Nos últimos anos, o cenário do ensino superior brasileiro passou por transformações profundas. A **pandemia de Covid-19**, iniciada em 2020, interrompeu aulas presenciais, acelerou a adoção do ensino remoto e gerou incertezas tanto para estudantes quanto para instituições. Muitos cursos viram queda nas matrículas, evasões inesperadas e uma reorganização no perfil de ingressantes. Em meio a esse contexto de instabilidade, entender o **comportamento da demanda por cursos específicos** tornou-se uma tarefa estratégica para universidades e centros universitários.
 
-O curso de **Ciência de Dados e Inteligência Artificial do IESB** surge justamente nesse período, acompanhando a crescente valorização da análise de dados em um mundo cada vez mais digital e orientado por informação. No entanto, prever quantos alunos ingressariam em um curso novo, em um **cenário pós-Covid** e de recuperação gradual do setor educacional, é um desafio estatístico complexo. A simples observação de séries históricas não seria suficiente, pois os padrões anteriores à pandemia perderam parte da validade.
+        O curso de **Ciência de Dados e Inteligência Artificial do IESB** surge justamente nesse período, acompanhando a crescente valorização da análise de dados em um mundo cada vez mais digital e orientado por informação. No entanto, prever quantos alunos ingressariam em um curso novo, em um **cenário pós-Covid** e de recuperação gradual do setor educacional, é um desafio estatístico complexo. A simples observação de séries históricas não seria suficiente, pois os padrões anteriores à pandemia perderam parte da validade.
 
-Nesse contexto, surge a motivação para **aplicar modelos estatísticos**. Um **modelo frequentista**, como a **GLM Poisson**, poderia fornecer uma estimativa pontual, mas com risco de subestimar ou superestimar a realidade, dado o choque estrutural recente. Já a **abordagem bayesiana** permite incorporar incertezas, refletir cenários possíveis e quantificar a variabilidade das previsões. A pergunta central, então, se torna: ***quantos alunos poderiam ser esperados no curso de Ciência de Dados do IESB em 2023, considerando as condições excepcionais que marcaram o período recente?***
+        Nesse contexto, surge a motivação para **aplicar modelos estatísticos**. Um **modelo frequentista**, como a **GLM Poisson**, poderia fornecer uma estimativa pontual, mas com risco de subestimar ou superestimar a realidade, dado o choque estrutural recente. Já a **abordagem bayesiana** permite incorporar incertezas, refletir cenários possíveis e quantificar a variabilidade das previsões. A pergunta central, então, se torna: ***quantos alunos poderiam ser esperados no curso de Ciência de Dados do IESB em 2023, considerando as condições excepcionais que marcaram o período recente?***
 
-Assim, o uso dos dados do **Censo da Educação Superior de 2023** não é apenas uma escolha técnica, mas também histórica: eles refletem o primeiro momento de relativa normalização após os impactos da pandemia, oferecendo uma base realista para avaliar a aderência entre modelos estatísticos e a realidade observada.""")
+        Assim, o uso dos dados do **Censo da Educação Superior de 2023** não é apenas uma escolha técnica, mas também histórica: eles refletem o primeiro momento de relativa normalização após os impactos da pandemia, oferecendo uma base realista para avaliar a aderência entre modelos estatísticos e a realidade observada.
+    """)
+
     
     st.divider()
 
@@ -62,24 +64,21 @@ Assim, o uso dos dados do **Censo da Educação Superior de 2023** não é apena
 
     st.divider()
 
-    st.markdown("""
-                        <div style="text-align: justify">
-                        <h5>Variável Dependente (Y) </h5>
-                        <h6><code>qt_ing</code> - Quantidade de ingressantes em 2023</h6>
-        
-                        Essa é a variável de interesse central da pesquisa, pois responde diretamente à pergunta: <b><em>quais fatores institucionais e socioeconômicos estão associados ao ingresso de novos estudantes nos cursos de graduação da RIDE-DF em 2023?</em></b>
-                        
-                        Optou-se por modelar o número de ingressantes em vez do total de matrículas, já que este último mistura alunos veteranos com calouros, enquanto o ingresso capta melhor a dinâmica de expansão ou retração dos cursos.
-                        </div>
-                        """, unsafe_allow_html=True)
-        
-    st.divider()
+    st.markdown("##### Variáveis do Modelo")
 
-    st.markdown("<h5>Variáveis Independentes (X) </h5>", unsafe_allow_html=True)
+    st.markdown("As variáveis foram selecionadas com base na análise exploratória, buscando capturar os principais fatores que influenciam o número de ingressantes nos cursos de graduação. A seguir, detalham-se as variáveis dependente e independentes utilizadas nos modelos.")
+
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("###### 🔺 Variável Dependente (Y)")
+    st.markdown("**```qt_ing``` - Quantidade de ingressantes em 2023**")
+
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("###### 🔹 Variáveis Independentes (X)")
+
     col1, col2, col3, col4 = st.columns(4, gap="large")
 
     with col1:
-        st.markdown("**Características Institucionais**")
+        st.markdown("<small><b>INSTITUCIONAIS</b></small>", unsafe_allow_html=True)
         st.markdown("""
                         <ul>
                             <li><code>tp_rede</code> <br><b>Pública ou Privada</b><br>
@@ -90,7 +89,7 @@ Assim, o uso dos dados do **Censo da Educação Superior de 2023** não é apena
                         """, unsafe_allow_html=True)
 
     with col2:
-        st.markdown("**Qualificação dos Docentes**")
+        st.markdown("<small><b>CORPO DOCENTE</b></small>", unsafe_allow_html=True)
         st.markdown("""
                         <ul>
                             <li><code>prop_doc_avancado</code> <br><b>Proporção de docentes com mestrado ou doutorado</b><br>
@@ -99,7 +98,7 @@ Assim, o uso dos dados do **Censo da Educação Superior de 2023** não é apena
                         """, unsafe_allow_html=True)
             
     with col3:
-        st.markdown("**Características do Curso**")
+        st.markdown("<small><b>CURSO</b></small>", unsafe_allow_html=True)
         st.markdown("""
                         <ul>
                             <li><code>tp_grau_academico</code> <br><b>Bacharelado, Licenciatura, Tecnológico ou Não aplicável</b><br>
@@ -112,7 +111,7 @@ Assim, o uso dos dados do **Censo da Educação Superior de 2023** não é apena
                         """, unsafe_allow_html=True)
             
     with col4:
-        st.markdown("**Perfil dos Ingressantes**")
+        st.markdown("<small><b>PERFIL DOS INGRESSANTES</b></small>", unsafe_allow_html=True)
         st.markdown("""
                         <ul>
                             <li><code>prop_ing_pp</code> <br><b>Proporção de ingressantes pretos e pardos</b><br>
@@ -122,12 +121,17 @@ Assim, o uso dos dados do **Censo da Educação Superior de 2023** não é apena
                         </ul>
                         """, unsafe_allow_html=True)
 
+
+
+
+
+
 with tab2:
 
     st.markdown("#### Resultados dos Modelos")
     st.markdown("<br>", unsafe_allow_html=True)
     
-    st.markdown("##### 📊 GLM Poisson")
+    st.markdown("##### 📈 Modelo Frequentista - GLM Poisson")
 
     st.markdown(f"""
     - **Curso:** {curso}  
@@ -178,7 +182,7 @@ with tab2:
 
     st.divider()
 
-    st.markdown("##### 📈 Modelo Bayesiano")
+    st.markdown("##### 🎲 Modelo Bayesiano")
 
     st.markdown(f"""
     - **Curso:** {curso}  
